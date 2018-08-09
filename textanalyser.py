@@ -44,8 +44,8 @@ def read_All_CV(filename):
 #    model.save(dir_model_name)
 #    
     
-def find(data1,dircvs,model):  
-    
+def find(data1,dircvs,model1):  
+    model = Word2Vec.load(model1)
     data = textract.process(data1).decode('utf-8')
     w2v = []
     val = True
